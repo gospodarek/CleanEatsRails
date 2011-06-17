@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe BlogsController do
+describe PostsController do
 
 end
