@@ -1,6 +1,8 @@
 CleanEats::Application.routes.draw do
   
   resources :posts
+  match '/',  :to => 'dash#index'
+  
   
 
   # The priority is based upon order of creation:
