@@ -13,6 +13,8 @@
 ActiveRecord::Schema.define(:version => 20110617013827) do
 
   create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

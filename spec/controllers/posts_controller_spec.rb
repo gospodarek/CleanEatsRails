@@ -9,8 +9,9 @@ describe PostsController do
   
   it "should allow me to create a new post" do
     count = Post.count
-    post :create, {:post=>{:title=>"Test Post", :text=>"Test text"}
-    Post.cound.should == (count + 1)
+    post :create, {:post=>{:title=>"Test Post", :text=>"Test text"}}
+    Post.count.should == (count + 1)
   end
   
 end
+
