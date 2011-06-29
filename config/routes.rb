@@ -1,8 +1,11 @@
 CleanEats::Application.routes.draw do
   
   resources :posts
-  match '/',  :to => 'dash#index'
-  
+  match '/',  :to => 'pages#index'
+  match '/about', :to => 'pages#about'
+  match '/contact', :to => 'pages#contact'
+  match '/whatIs', :to => 'pages#whatIs'
+  match '/index', :to => 'pages#index'
   
 
   # The priority is based upon order of creation:

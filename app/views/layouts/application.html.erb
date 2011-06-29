@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>CleanEats</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+  		<title><%= title %></title>
+  			<%= csrf_meta_tag %>
+			<%= render 'layouts/stylesheets' %>
+	</head>
+	<body>
+		<div class="container">
+    <div class="top">
+			<%= render 'layouts/header' %>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="container">
+			  
+			  <!--begin second half -->
+            <div class="center" id="sidebar"> 
+        	<div class="rounded-corners" id="food_gallery">
+        	   <h3>Food Gallery</h3>		
+        	</div>   
 
-<%= yield %>
+        </div> <!--  end sidebar -->
 
-</body>
+				<div class="section" class="round">
+						<% flash.each do |key, value| %>
+							<div class="flash <%= key %>"><%= value %></div>
+				 		<% end %>
+        			<div id="content"><%= yield %></div>
+				</div>
+					<%= render 'layouts/footer' %>
+			</div>	
+		</div>
+	</body>
 </html>
