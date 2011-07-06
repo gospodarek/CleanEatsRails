@@ -2,6 +2,9 @@ class PagesController < ApplicationController
   
   def index
     @title="Home"
+    
+    @posts= Post.find(:all, :order => "id DESC", :limit => 3)
+    
   end
   def about
     @title="About"

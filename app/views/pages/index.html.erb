@@ -1,9 +1,13 @@
 <div class="post">
-  <h1 id="post">Post title</h1>					
-  <h3 class="entry">by Admin on date</h3>
   <img class="photo" src="images/<?php echo $photo ?>.jpg" alt="<?php echo $photo ?>" />
 
-<p>hi. this is all information alsdkfjasdlkfjdslfkjwhere the posts willb e i gusslkdjfalksdfjoeij sa;lkdfjsa .  sljd a. .amsdf lkj;a sdf.. as;lkdfj all.  leijfaoj. af;slkfjasld. laskdjfas.</p>
-	
-<hr>
+  <p>
+    <% @posts.each do |p| %>
+      <h1 id="post"><%= p.title %></hl>
+      <h3 class="entry">by Admin on <%= p.created_at.to_date %></h3>
+      <%= p.text %>
+      <hr />
+    <% end %>
+  </p>
+  
 </div>

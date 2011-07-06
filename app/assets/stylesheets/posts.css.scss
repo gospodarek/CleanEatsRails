@@ -2,24 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.post h1
-{
-	font-size: 20px;
-	padding-bottom: 6px;
-}
-.post p
-{
-	padding-right: 20px;
-	padding-top: 10px;
-	padding-bottom: 15px;
-}
-.post h3
-{
-	padding-top: 7px;
-	font-family: fantasy;
-	font-size: 11px;
-	padding-left: 4px;
-	color: #919191;
+.post {
+  h1 {
+	  font-size: 20px;
+	  padding-bottom: 6px;
+	}
+	p {
+  	padding: 10px 20px 15px 0px;
+  }
+  h3 {
+  	padding-top: 7px;
+  	padding-left: 4px;
+  	color: #919191;
+  	font: {
+  	  family: fantasy;
+  	  size: 11px;
+  	}
+  }
 }
 
 hr
