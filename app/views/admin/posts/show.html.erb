@@ -1,0 +1,27 @@
+<%= link_to("Back to List", admin_posts_path, :class => 'back_link') %>
+
+<div class="post show">
+  <h2>Show Admin Post</h2>
+  
+  <table>
+    <tr>
+      <th>Title</th>
+      <td><%= @post.title %></td>
+    </tr>
+    <tr>
+      <th>Text</th>
+      <td><%= @post.text %></td>
+    </tr>
+    <tr>
+      <th>Date Created</th>      
+      <td><%= @post.created_at.to_date %></td>
+    </tr>
+    <tr>
+      <td class="actions">
+        <%= link_to("Edit", edit_admin_post_path(@post), :action => 'edit', :class => 'action edit') %>
+        <%= link_to("Delete", {:action => 'delete', :id => @post.id}, :class => 'action delete', :confirm =>"Sure you want to delete?", :method => :delete) %>
+      </td>
+      </tr>
+  </table>
+  
+</div>

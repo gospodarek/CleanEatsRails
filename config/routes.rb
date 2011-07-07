@@ -6,6 +6,10 @@ CleanEats::Application.routes.draw do
   match '/contact', :to => 'pages#contact'
   match '/whatIs', :to => 'pages#whatIs'
   match '/index', :to => 'pages#index'
+
+  namespace :admin do
+    resources :posts
+  end
   
 
   # The priority is based upon order of creation:

@@ -1,0 +1,19 @@
+<%= link_to("Back to List", admin_posts_path, :class => 'back_link') %>
+
+<h1>Update post</h1>
+
+<%= form_for(@post, :url => {:action => 'update', :id => @post.id}) do |post| %>
+ 
+	<div class="field">
+	    <%= post.label :title, "Post Title" %><br />
+	    <%= post.text_field :title %>
+	  </div>
+  <div class="field">
+    <%= post.label :text %><br />
+    <%= post.text_field :text %>
+  </div>
+ 
+  <div class="actions">
+    <%= submit_tag "Update Post" %>
+  </div>
+<% end%>

@@ -1,0 +1,24 @@
+<div class="post list">
+  <h2>Posts</h2>
+  
+  <table class="listing">
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+      <th>Date Created</th>      
+    </tr>
+    <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.text %></td>
+      <td><%= post.created_at.to_date %></td>
+      <td class="actions">
+        <%= link_to("Show", admin_post_path(post), :class => 'action show') %>
+        <%= link_to("Edit", edit_admin_post_path(post), :class => 'action edit') %>
+        <%= link_to("Delete", {:action => 'delete', :id => post.id}, :class => 'action delete', :confirm =>"Sure you want to delete?", :method => :delete) %>
+      </td>
+    </tr>
+    <% end %>
+    <%=link_to("New", new_admin_post_path)%>
+  </table>
+</div>

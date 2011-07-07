@@ -1,0 +1,21 @@
+<%= link_to("Back", posts_path, :class => '#') %>
+
+<div class="post show">
+  <h2>Show Post</h2>
+  
+  <table>
+    <tr>
+      <th>Title</th>
+      <td><%= @post.title %></td>
+    </tr>
+    <tr>
+      <th>Text</th>
+      <td><%= @post.text %></td>
+    </tr>
+    <tr>
+      <th>Date Created</th>      
+      <td><%= @post.created_at.to_date %></td>
+    </tr>
+  </table>
+  
+</div>

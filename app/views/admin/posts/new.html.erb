@@ -1,0 +1,23 @@
+<%= link_to("Back to List", admin_posts_path, :class => 'back_link') %>
+
+<h1>New post</h1>
+
+<%= form_for(@post, :url => {:action => 'create'}) do |post| %>
+ 
+	<div class="field">
+	    <%= post.label :title, "Post Title" %><br />
+	    <%= post.text_field :title %>
+	  </div>
+  <div class="field">
+    <%= post.label :text %><br />
+    <%= post.text_field :text %>
+  </div>
+ 
+  <div class="actions">
+    <%= post.submit "Create Post" %>
+  </div>
+	<div class="actions">
+		<%= submit_tag 'Cancel' %>  
+	</div>
+<% end%>
+
