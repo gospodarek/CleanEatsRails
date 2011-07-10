@@ -8,6 +8,7 @@
       <th>Title</th>
       <td><%= @post.title %></td>
     </tr>
+    <tr><%= image_tag @post.photo.url, :class => "upload" %></tr>
     <tr>
       <th>Text</th>
       <td><%= @post.text %></td>

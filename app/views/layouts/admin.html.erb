@@ -12,19 +12,12 @@
   		</div><!-- end header -->
 		
   		<!-- begin second half -->
-	  			  
-		  <div class="center" id="sidebar"> 
-      	<div class="rounded-corners" id="food_gallery">
-      	   <h3>Food Gallery</h3>		
-      	</div><!-- end rounded-corners, food-gallery -->   
-      </div> <!--  end sidebar -->
-
-			<div>
+			<div class="flash" >
 					<% flash.each do |key, value| %>
 						<div class="flash <%= key %>"><%= value %></div>
 			 		<% end %>
-      			<div id="content"><%= yield %></div>
-			</div>
+      			<div class="admin" id="content"><%= yield %></div>
+			</div><!-- end flash -->
 				<%= render 'layouts/footer' %>
 		</div><!-- end container -->
 	</body>

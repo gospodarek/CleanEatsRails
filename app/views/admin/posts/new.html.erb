@@ -2,7 +2,7 @@
 
 <h1>New post</h1>
 
-<%= form_for(@post, :url => {:action => 'create'}) do |post| %>
+<%= form_for(@post, :html => {:multipart => true}, :url => {:action => 'create'}) do |post| %>
  
 	<div class="field">
 	    <%= post.label :title, "Post Title" %><br />
@@ -10,7 +10,11 @@
 	  </div>
   <div class="field">
     <%= post.label :text %><br />
-    <%= post.text_field :text %>
+    <%= post.text_area :text %>
+  </div>
+  <div>
+    <%= post.label :photo, "Upload a photo" %><br />
+    <%= post.file_field :photo %>
   </div>
  
   <div class="actions">

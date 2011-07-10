@@ -10,7 +10,7 @@
     <% @posts.each do |post| %>
     <tr>
       <td><%= post.title %></td>
-      <td><%= post.text %></td>
+      <td><%= truncate(post.text, :length => 40) %></td>
       <td><%= post.created_at.to_date %></td>
       <td class="actions">
         <%= link_to("Show", admin_post_path(post), :class => 'action show') %>

@@ -23,7 +23,7 @@ body {
 	  right: 1px solid;
 	}
 }
-.top {
+.header {
   img{
   	z-index: 0;
   	margin-top: -197px;
@@ -54,43 +54,12 @@ a:hover{
 	color: #c41484;
 }
 
-/*---------------NAVIGATION MENU-------------------------------------*/
-#nav{
-	z-index: 0;
-	background-color: #99CC00;
-	padding-bottom: 10px;
-	padding-top: 10px;
-	text-align: center;
-	width: 100%;
-	border-bottom-width: 1px;
-	border-top-width: 1px;
-	border-style: solid;
-	border-color: #636363;
-	list-style-type: none;
-	ul li{
-  	z-index: 0;
-  	text-decoration: none;
-  	display: inline;
-    }
-    a{
-    	z-index: 0;
-    	color: #444243;
-    	font-size: 17px;
-    	text-decoration: none;
-    	}
-}
-#nav ul li a:hover{
-	color: white;	
-}
-
-/*---------------sidebar-----------------------*/
+/*--------------sidebar----------*/
 #sidebar 
 {
   padding: 22px 0px 22px 22px;
-	min-height: 240px;
-	border-color: #8a8a8a;
-	border-style: solid;
-	border-left-width: 1px;
+	min-height: 340px;
+	border-left: 1px solid #8a8a8a;
 	width: 260px;
 	float: right;
 	background-color: #f2f6f3;
@@ -102,9 +71,7 @@ a:hover{
 #quote{
 	padding: 20px 17px 20px 20px;
 	margin: 10px 32px 10px 10px;
-	border-color: #595959;
-	border-style: dotted;
-	border-width: 1px;
+	border: 1px dotted #595959;
 	background-color: $white;
 }
 
@@ -175,7 +142,7 @@ a:hover{
   -moz-border-radius: 15px;
 	border-radius: 15px;
 }
-/*------------------------------CONTACT FORM---------------------*/
+/*------------------------------CONTACT FORM---------------------
 table {
 	width: 500px;
 }
@@ -232,21 +199,6 @@ form fieldset legend
 	display: none;
 }
 
-/*-------------------------------FOOTER---------------------*/
-#footer {
-	color: #2770e7;
-	font-size: 13px;
-	padding-bottom: 34px;
-	padding-top: 11px;
-	clear: both;
-	text-align: center;
-	display: block;
-	z-index: 0;
-}
-#signature {
-	font-size: 17px;
-	font-family: cursive;
-}
 /*-------------------tabs-------------------------*/
 ul.tabs {
 	margin: 0;

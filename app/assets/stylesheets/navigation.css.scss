@@ -1,0 +1,27 @@
+#nav{
+	z-index: 0;
+	background-color: #99CC00;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: center;
+	width: 100%;
+	border-bottom-width: 1px;
+	border-top-width: 1px;
+	border-style: solid;
+	border-color: #636363;
+	list-style-type: none;
+	ul li{
+  	z-index: 0;
+  	text-decoration: none;
+  	display: inline;
+    }
+    a{
+    	z-index: 0;
+    	color: #444243;
+    	font-size: 17px;
+    	text-decoration: none;
+    	}
+}
+#nav ul li a:hover{
+	color: white;	
+}

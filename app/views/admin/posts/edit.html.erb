@@ -10,9 +10,15 @@
 	  </div>
   <div class="field">
     <%= post.label :text %><br />
-    <%= post.text_field :text %>
+    <%= post.text_area :text %>
   </div>
- 
+  <div>
+    <%= image_tag @post.photo.url, :class => "upload_thumbnail" %>
+    <%= post.label :delete_photo, "Delete current photo" %>
+    <%= post.check_box(:delete_photo) %><br />
+    <%= post.label :photo, "Upload a photo" %><br />
+    <%= post.file_field :photo%>
+  </div>
   <div class="actions">
     <%= submit_tag "Update Post" %>
   </div>

@@ -12,6 +12,7 @@ gem 'sass-rails'
 gem 'coffee-script'
 gem 'uglifier'
 
+gem "paperclip", "~> 2.3"
 gem 'jquery-rails'
 
 group :development do

@@ -6,5 +6,8 @@
  *= require reset
  *= require main
  *= require posts
+ *= require admin
+ *= require footer
+ *= require navigation
 */
 
