@@ -43,10 +43,16 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.1.1)
+    configatron (2.8.0)
+      yamler (>= 0.1.0)
+    cover_me (1.0.0)
+      configatron
+      hashie
     diff-lcs (1.1.2)
     erubis (2.7.0)
     execjs (1.2.0)
       multi_json (~> 1.0)
+    hashie (1.0.0)
     hike (1.1.0)
     i18n (0.6.0)
     jquery-rails (1.0.12)
@@ -91,7 +97,7 @@ GEM
       rdoc (~> 3.4)
       thor (~> 0.14.6)
     rake (0.9.2)
-    rdoc (3.7)
+    rdoc (3.8)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
       rspec-expectations (~> 2.6.0)
@@ -127,6 +133,7 @@ GEM
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
+    yamler (0.1.0)
 
 PLATFORMS
   ruby
@@ -135,6 +142,7 @@ DEPENDENCIES
   autotest
   autotest-standalone
   coffee-script
+  cover_me (>= 1.0.0)
   jquery-rails
   mysql2
   paperclip (~> 2.3)

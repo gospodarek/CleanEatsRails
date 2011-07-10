@@ -23,6 +23,7 @@ group :development do
 end
 
 group :test do
+  gem 'cover_me', '>= 1.0.0'
 	gem 'rspec'
 	gem 'rspec-rails'
 	gem 'autotest'
