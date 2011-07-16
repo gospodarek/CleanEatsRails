@@ -1,27 +1,37 @@
+<%
+@title = (@post.new_record?) ? "New Post" : "Edit Post"
+%>
+
+
 <%= link_to("Back to List", admin_posts_path, :class => 'back_link') %>
 
-<h1>New post</h1>
+<h1><%=@title%></h1>
 
-<%= form_for(@post, :html => {:multipart => true}, :url => {:action => 'create'}) do |post| %>
+<%= form_for([:admin, @post], :html => {:multipart => true}) do |f| %>
  
 	<div class="field">
-	    <%= post.label :title, "Post Title" %><br />
-	    <%= post.text_field :title %>
+	    <%= f.label :title, "Post Title" %><br />
+	    <%= f.text_field :title %>
 	  </div>
   <div class="field">
-    <%= post.label :text %><br />
-    <%= post.text_area :text %>
+    <%= f.label :text %><br />
+    <%= f.text_area :text %>
   </div>
   <div>
-    <%= post.label :photo, "Upload a photo" %><br />
-    <%= post.file_field :photo %>
+    <% if @post.new_record? %>
+      <%= f.label :photo, "Upload a photo" %><br />
+      <%= f.file_field :photo %>
+    <% else %>
+      <%= image_tag @post.photo.url, :class => "upload_thumbnail" %>
+      <%= f.label :delete_photo, "Delete current photo" %>
+      <%= f.check_box(:delete_photo) %><br />
+      <%= f.label :photo, "Upload a photo" %><br />
+      <%= f.file_field :photo%>
+    <% end %>
   </div>
  
   <div class="actions">
-    <%= post.submit "Create Post" %>
+    <%= f.submit "Submit", :class=>"button" %><%=link_to("Cancel", admin_posts_path, :class=>"button")%>
   </div>
-	<div class="actions">
-		<%= submit_tag 'Cancel' %>  
-	</div>
 <% end%>
 

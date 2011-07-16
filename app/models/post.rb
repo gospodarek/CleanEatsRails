@@ -2,8 +2,8 @@ class Post < ActiveRecord::Base
   
   validates :title,  :presence => true
   has_attached_file :photo,
-                    :url => "/assets/:id/:style/:basename.:extension",
-                    :path => ":rails_root/app/assets/images/:id/:style/:basename.:extension"
+                    :url => "/assets/paperclip/:id/:style/:basename.:extension",
+                    :path => ":rails_root/app/assets/images/paperclip/:id/:style/:basename.:extension"
                     
   before_validation :clear_photo
    

@@ -9,5 +9,6 @@
  *= require admin
  *= require footer
  *= require navigation
+ *= require objects/form/button
 */
 
