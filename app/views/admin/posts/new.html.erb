@@ -1,24 +1,26 @@
 <%= link_to("Back to List", admin_posts_path, :class => 'back_link') %>
 
-<h1>New post</h1>
+<h1><%=(controller.action_name=="new") ? "New post" : "Edit Post"%></h1>
 
-<%= form_for(@post, :html => {:multipart => true}, :url => {:action => 'create'}) do |post| %>
+<%= form_for([:admin, @post], :html => {:multipart => true}) do |f| %>
+
+ <%= error_messages_for(@post) %>
  
 	<div class="field">
-	    <%= post.label :title, "Post Title" %><br />
-	    <%= post.text_field :title %>
+	    <%= f.label :title, "Post Title" %><br />
+	    <%= f.text_field :title %>
 	  </div>
   <div class="field">
-    <%= post.label :text %><br />
-    <%= post.text_area :text %>
+    <%= f.label :text %><br />
+    <%= f.text_area :text, :size => "70x10" %>
   </div>
   <div>
-    <%= post.label :photo, "Upload a photo" %><br />
-    <%= post.file_field :photo %>
+    <%= f.label :photo, "Upload a photo" %><br />
+    <%= f.file_field :photo %>
   </div>
  
   <div class="actions">
-    <%= post.submit "Create Post" %>
+    <%= f.submit "Create Post" %>
   </div>
 	<div class="actions">
 		<%= submit_tag 'Cancel' %>  

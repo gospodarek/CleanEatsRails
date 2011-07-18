@@ -3,7 +3,7 @@
   <p>
     <% @posts.each do |p| %>
       <h1 id="post"><%= p.title %></hl>
-      <h3 class="entry">by Admin on <%= p.created_at.to_date %></h3>
+      <h3 class="entry">by Admin on <%= p.created_at.to_s(:custom) %></h3>
       <%= image_tag p.photo.url, :class=> "upload" %><br />
       <%= truncate(p.text, :length => 500, :separator => ' ', :omission => '... (Read More)') %>
       <hr />

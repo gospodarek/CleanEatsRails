@@ -29,15 +29,17 @@ class Admin::PostsController < ApplicationController
   def edit
     @title = "Edit Post"
     @post = Post.find(params[:id])
+    render(:new)
   end
   
   def update
     @post = Post.find(params[:id])
+    @posts.delete_photo = 0 if params[:post][:photo].present?
     if @post.update_attributes(params[:post])
       flash[:success] = "Post updated."
       redirect_to(admin_posts_path)
     else
-      render(:edit)
+      render(:new)
     end
   end
   

@@ -11,7 +11,7 @@
     <tr><%= image_tag @post.photo.url, :class => "upload" %></tr>
     <tr>
       <th>Text</th>
-      <td><%= @post.text %></td>
+      <td><%= simple_format(@post.text) %></td>
     </tr>
     <tr>
       <th>Date Created</th>      

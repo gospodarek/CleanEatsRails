@@ -4,5 +4,7 @@ describe PostsController do
   
   it "should return an array of posts when I go to index"
   
+  get :index
+  
 end
 
