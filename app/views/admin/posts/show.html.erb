@@ -8,7 +8,7 @@
       <th>Title</th>
       <td><%= @post.title %></td>
     </tr>
-    <tr><%= image_tag @post.photo.url, :class => "upload" %></tr>
+    <tr><%= image_tag(@post.photo.url, :class => "upload") if @post.photo.present?%></tr>
     <tr>
       <th>Text</th>
       <td><%= simple_format(@post.text) %></td>
@@ -20,7 +20,7 @@
     <tr>
       <td class="actions">
         <%= link_to("Edit", edit_admin_post_path(@post), :action => 'edit', :class => 'action edit') %>
-        <%= link_to("Delete", {:action => 'delete', :id => @post.id}, :class => 'action delete', :confirm =>"Sure you want to delete?", :method => :delete) %>
+        <%= link_to("Delete", admin_post_path(@post), :class => 'action delete', :confirm =>"Sure you want to delete?", :method => :delete) %>
       </td>
       </tr>
   </table>

@@ -4,16 +4,18 @@ class Admin::PostsController < ApplicationController
   
   def index
     @posts = Post.find(:all, :order => "id DESC")
-    @title = "Admin Posts"
+  end
+
+  def show
+    @post = Post.find_by_id(params[:id])
   end
   
   def new
     @post = Post.new
-    @title = "New Post"
   end
   
   def create
-    @post = Post.new(params[:post])#need instance variable here so that values remain if render new
+    @post = Post.new(params[:post])
     if @post.save
       flash[:success] = "Post saved!"
       redirect_to(admin_posts_path)
@@ -22,19 +24,14 @@ class Admin::PostsController < ApplicationController
     end
   end
   
-  def show
-    @post = Post.find(params[:id])
-  end
-  
   def edit
-    @title = "Edit Post"
-    @post = Post.find(params[:id])
+    @post = Post.find_by_id(params[:id])
     render(:new)
   end
   
   def update
-    @post = Post.find(params[:id])
-    @posts.delete_photo = 0 if params[:post][:photo].present?
+    params[:post][:delete_photo] = 0 if params[:post][:photo].present?
+    @post = Post.find_by_id(params[:id])
     if @post.update_attributes(params[:post])
       flash[:success] = "Post updated."
       redirect_to(admin_posts_path)
@@ -44,7 +41,7 @@ class Admin::PostsController < ApplicationController
   end
   
   def delete
-    @post = Post.find(params[:id]).destroy
+    Post.destroy(params[:id])
     flash[:success] = "Post destroyed!"
     redirect_to(admin_posts_path)
   end

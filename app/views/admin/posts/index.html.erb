@@ -1,3 +1,8 @@
+<%
+@title = "Admin Posts"
+%>
+
+
 <div class="post list">
   <h2>Posts</h2>
   
@@ -15,7 +20,7 @@
       <td class="actions">
         <%= link_to("Show", admin_post_path(post), :class => 'action show') %>
         <%= link_to("Edit", edit_admin_post_path(post), :class => 'action edit') %>
-        <%= link_to("Delete", {:action => 'delete', :id => post.id}, :class => 'action delete', :confirm =>"Sure you want to delete?", :method => :delete) %>
+        <%= link_to("Delete", admin_post_path(post), :class => 'action delete', :confirm =>"Sure you want to delete?", :method => :delete) %>
       </td>
     </tr>
     <% end %>

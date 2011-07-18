@@ -1,9 +1,13 @@
+<%
+@title = (@post.new_record?) ? "New Post" : "Edit Post"
+%>
+
+
 <%= link_to("Back to List", admin_posts_path, :class => 'back_link') %>
 
-<h1><%=(controller.action_name=="new") ? "New post" : "Edit Post"%></h1>
+<h1><%=@title%></h1>
 
 <%= form_for([:admin, @post], :html => {:multipart => true}) do |f| %>
-
  <%= error_messages_for(@post) %>
  
 	<div class="field">
@@ -15,15 +19,20 @@
     <%= f.text_area :text, :size => "70x10" %>
   </div>
   <div>
-    <%= f.label :photo, "Upload a photo" %><br />
-    <%= f.file_field :photo %>
+    <% if @post.new_record? %>
+      <%= f.label :photo, "Upload a photo" %><br />
+      <%= f.file_field :photo %>
+    <% else %>
+      <%= image_tag @post.photo.url, :class => "upload_thumbnail" %>
+      <%= f.label :delete_photo, "Delete current photo" %>
+      <%= f.check_box(:delete_photo) %><br />
+      <%= f.label :photo, "Upload a photo" %><br />
+      <%= f.file_field :photo%>
+    <% end %>
   </div>
  
   <div class="actions">
-    <%= f.submit "Create Post" %>
+    <%= f.submit "Submit", :class=>"button" %><%=link_to("Cancel", admin_posts_path, :class=>"button")%>
   </div>
-	<div class="actions">
-		<%= submit_tag 'Cancel' %>  
-	</div>
 <% end%>
 
