@@ -1,25 +1,19 @@
 #sidebar 
 {
-  padding: 22px 0px 22px 22px;
-	min-height: 240px;
-	border-color: #8a8a8a;
-	border-style: solid;
-	border-left-width: 1px;
+  padding: 22px 10px 22px 5px;
+	height: 100%;
 	width: 260px;
 	float: right;
-	background-color: #f2f6f3;
 	font-size: 14px;
 	p{
   	padding-top: 25px;
     }
-}
-#quote{
-	padding: 20px 17px 20px 20px;
-	margin: 10px 32px 10px 10px;
-	border-color: #595959;
-	border-style: dotted;
-	border-width: 1px;
-	background-color: $white;
+		h3{
+			border-bottom: solid #76aa1f 1px;
+			padding-bottom: 3px;
+			font-size: 16px;
+			color: #76aa1f;
+		}
 }
 
 #food_gallery{
@@ -27,9 +21,21 @@
 	text-align: center;
 	height: 280px;
 	width: 160px;
-	border-color: #a69ca5;
-	border-style: solid;
-	border-width: 1px;
+
 	margin-left: 40px;
-	background-color: $white;
+}
+#tagCloud{
+	padding: 10px;
+}
+.search{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 0px 10px 0px 10px;
+	
+	label{
+		margin-top: 10px;
+	}
+	input{
+		margin-top: 10px;
+	}
 }

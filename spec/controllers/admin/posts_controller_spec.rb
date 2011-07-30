@@ -4,6 +4,12 @@ describe Admin::PostsController do
   
   it "should require admin rights to do anything"
   
+  it "should return an array of posts" do
+    get :index
+    assert_response :success
+    assert_not_nil assigns(:posts)
+  end
+  
   it "should allow me to create a new post" do
     get :new
     assigns[:post].should be_true
@@ -39,7 +45,7 @@ describe Admin::PostsController do
   it "should allow me to delete a post" do
     mypost = Post.create(:title=>"test", :text=>"lots of text")
     
-    post :delete, {:id=>mypost.id}
+    post :destroy, {:id=>mypost.id}
     Post.count.should == 0
   end
   

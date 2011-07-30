@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
   attr_accessor :password, :password_confirmation
 
-  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  email_regex = /\A[\w\.%\+\-\']+@(?:[A-Z0-9\-]+\.)+(?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|jobs|museum)\z/i
 
-  validates :username, :presence => true, :length   => { :maximum => 50 }
+  validates :username, :presence => true, :length   => { :maximum => 50 }, :uniqueness => true
             
   validates :email, :presence => true, :format   => { :with => email_regex },
               :uniqueness => { :case_sensitive => false }    
@@ -21,11 +21,6 @@ class User < ActiveRecord::Base
     user = find_by_email(email)
     return nil  if user.nil?
     return user if user.has_password?(submitted_password)
-  end
-
-  def self.authenticate_with_salt(id, cookie_salt)
-    user = find_by_id(id)
-    (user && user.salt == cookie_salt) ? user : nil
   end
   
 

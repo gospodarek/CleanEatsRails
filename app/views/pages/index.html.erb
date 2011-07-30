@@ -1,13 +1,13 @@
+<% @title = "Home" %>
+
 <div class="post">
 
-  <p>
-    <% @posts.each do |p| %>
-      <h1 id="post"><%= p.title %></hl>
-      <h3 class="entry">by Admin on <%= p.created_at.to_s(:custom) %></h3>
-      <%= image_tag p.photo.url, :class=> "upload" %><br />
-      <%= truncate(p.text, :length => 500, :separator => ' ', :omission => '... (Read More)') %>
+    <% @posts.each do |post| %>
+      <h1 id="post"><%= post.title %></hl>
+      <h3 class="entry">by Admin on <%= post.created_at.to_s(:custom) %></h3>
+      <%= image_tag post.photo.url, :class=> "upload" %><br />
+      <%= truncate_post_with_expand(post.text, 400).html_safe %>
       <hr />
     <% end %>
-  </p>
   
 </div>

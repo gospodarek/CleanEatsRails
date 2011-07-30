@@ -3,17 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .post {
+	padding: 10px 20px 15px 0px;
   h1 {
-	  font-size: 20px;
-	  padding-bottom: 6px;
+	  font-size: 22px;
 	}
-	p {
-  	padding: 10px 20px 15px 0px;
-  }
   h3 {
-  	padding-top: 7px;
-  	padding-left: 4px;
-  	color: #919191;
+		margin-top: -7px;
+  	padding-left: 12px;
+  	/*color: #919191;*/
+		color: #669900;
   	font: {
   	  family: fantasy;
   	  size: 11px;
@@ -25,4 +23,14 @@ hr
 {
 	color: #c6c6c6;
 	height: 1px;
+	margin: 20px 0px 20px 0px;
+	width: 100%;
+}
+.upload {
+	border: 5px solid black;
+	margin-top: 17px;
+	margin-bottom: 17px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;	
 }

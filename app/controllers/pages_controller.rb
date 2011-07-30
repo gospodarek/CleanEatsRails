@@ -1,16 +1,22 @@
 class PagesController < ApplicationController
   
   def index
-    @title="Home"
-    @posts= Post.find(:all, :order => "id DESC", :limit => 3)   
+    @posts= Post.find(:all, :order => "id DESC", :limit => 5)   
   end
+  
   def about
-    @title="About"
   end
-  def whatIs
-    @title="What is Clean Eating?"
+  
+  def whatis
   end
+  
   def contact
-    @title="Contact"
   end
+  
+  def send_message
+    SystemMailer.contact(params[:name], params[:email], params[:text]).deliver
+    flash[:success] = "Thank you.  Your message sent successfully."
+    redirect_to("/")
+  end
+
 end

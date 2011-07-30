@@ -1,1 +1,28 @@
-contact form here
+<% @title = "Contact" %>
+
+<h1><%=@title%></h1>
+
+<p>We love hearing from our readers! Please let us know if you have any questions, advice or just want to chat. Thank you for your feedback!</p>
+
+<%= form_tag(send_message_path) do %>
+ 
+	<div class="field">
+    <label for="name">Name</label><br />
+    <input id="name"></input>
+  </div>
+  <div class="field">
+	  <label for="email">Email</label><br />
+    <input type="text" id="subject"></input>
+	</div>
+  <div class="field">
+    <label for="text">Message</label><br />
+    <textarea id="text", cols="33" rows="12" ></textarea>
+  </div>
+ 
+  <div class="actions">
+    <input type="submit" value="Send" class="button" ></input>
+  </div>
+<% end%>
+
+
+

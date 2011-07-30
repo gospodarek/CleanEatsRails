@@ -7,7 +7,7 @@
 	margin: 10px;
 }
 .upload {
-	border: 1px solid black;
+	border: 3px solid black;
 }
 .upload_thumbnail {
 	height: 100px;
@@ -24,7 +24,9 @@
 		border: 1px solid black;
 	}
 	td{
-		padding: 2px 10px;
+		padding: 0px 10px;
+		font-size: 13px;
+		margin-top: 0px;
 	}
 }
 #errorExplanation {

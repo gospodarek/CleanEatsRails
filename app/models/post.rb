@@ -14,6 +14,7 @@ class Post < ActiveRecord::Base
   def delete_photo
     !!@delete_photo
   end
+  
   alias_method :delete_photo?, :delete_photo
 
   def clear_photo

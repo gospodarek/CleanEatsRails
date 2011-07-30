@@ -8,6 +8,7 @@
  *= require posts
  *= require admin
  *= require footer
+ *= require sidebar
  *= require navigation
  *= require objects/form/button
 */

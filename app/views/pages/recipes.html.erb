@@ -1,0 +1,17 @@
+<% @title = "Search by Ingredient" %>
+
+<div class="ingredients">
+  <h1>Search recipes by the following ingredients:</h1>
+    
+    <div class="ingredient_list">
+      <ul>
+       <li>Apples</li>
+       <li>Black Beans</li>   
+       <li><%= link_to "Lentils", search_path(:query=>"lentils") %></li>       
+       <li>Onion</li>   
+       <li>Tomatoes</li>   
+       <li>Zucchini</li>   
+     </ul>
+    </div>
+  
+</div>

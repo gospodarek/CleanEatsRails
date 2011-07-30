@@ -40,7 +40,7 @@ class Admin::PostsController < ApplicationController
     end
   end
   
-  def delete
+  def destroy
     Post.destroy(params[:id])
     flash[:success] = "Post destroyed!"
     redirect_to(admin_posts_path)

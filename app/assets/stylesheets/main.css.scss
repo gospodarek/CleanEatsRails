@@ -7,13 +7,13 @@ $white: #fff;
 body {
 	background-color: white;
 	font: {
-    family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    family: "Trebuchet MS",Tahoma,Verdana,sans-serif;
     size: 1 em;
-  }
+  }	
 }
 .container {
   width: 860px;
-	background-color: $white;
+	background-color: $white;	
   margin: {
     right: auto;
     left: auto;
@@ -46,6 +46,9 @@ body {
 }
 .center {
 	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 .special{
 	color: #76aa1f !important;
@@ -54,54 +57,63 @@ a:hover{
 	color: #c41484;
 }
 
-/*--------------sidebar----------*/
-#sidebar 
-{
-  padding: 22px 0px 22px 22px;
-	min-height: 340px;
-	border-left: 1px solid #8a8a8a;
-	width: 260px;
-	float: right;
-	background-color: #f2f6f3;
-	font-size: 14px;
-	p{
-  	padding-top: 25px;
-    }
-}
-#quote{
-	padding: 20px 17px 20px 20px;
-	margin: 10px 32px 10px 10px;
-	border: 1px dotted #595959;
-	background-color: $white;
+.button{
+	margin-top: 5px;
 }
 
-#food_gallery{
-	margin-top: 20px;
-	text-align: center;
-	height: 280px;
-	width: 160px;
-	border-color: #a69ca5;
-	border-style: solid;
-	border-width: 1px;
-	margin-left: 40px;
-	background-color: $white;
+/*------------------Results Page---------------------*/
+.results{
+	h1{
+		color: #76aa1f;
+	}
+	p{
+		border-bottom: dotted 1px #303030;
+		padding-bottom: 20px;
+	}
 }
+
+
+/*------------------Recipes Page---------------------*/
+.ingredients{
+	h1{
+	}
+}
+.ingredient_list{
+	ul{
+		padding: 20px 0px 0px 40px;
+	}
+	li{
+		padding: 0px 0px 5px 0px;
+		list-style-type: disc;
+	}
+	
+}
+
+
 
 /*------------------CONTENT AREA---------------------*/
 
 #content {
 	margin: 1px;
 	line-height: 1.5em;
-	padding: 36px 45px 15px 25px;
+	padding: 36px 45px 15px 35px;
 	float: left;
-	color: #454545;
+	color: #666666;
 	list-style-position: outside;
 	height: auto;
 	min-height: 340px;
 	text-align: left;
 	width: 490px;
-	font-size: 14px;
-	
+	font-size: 15px;
+	h1{
+		margin-bottom: 10px;
+		font-size: 20px;
+	}
+	p{
+		margin-top: 15px;
+		margin-bottom: 10px;
+		
+	}	
 }
 #products ul li
 {
@@ -142,8 +154,14 @@ a:hover{
   -moz-border-radius: 15px;
 	border-radius: 15px;
 }
-/*------------------------------CONTACT FORM---------------------
-table {
+/*------------------------------CONTACT FORM---------------------*/
+.field{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+	
+	
+	/*table {
 	width: 500px;
 }
 .row{
