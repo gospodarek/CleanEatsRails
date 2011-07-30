@@ -6,7 +6,7 @@
       <h1 id="post"><%= post.title %></hl>
       <h3 class="entry">by Admin on <%= post.created_at.to_s(:custom) %></h3>
       <%= image_tag post.photo.url, :class=> "upload" %><br />
-      <%= truncate_post_with_expand(post.text, 400).html_safe %>
+      <div class="post"><%= truncate_post_with_expand(post.text, 10).html_safe %></div>
       <hr />
     <% end %>
   

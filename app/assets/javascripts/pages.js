@@ -1,7 +1,13 @@
 (function ( $, window, document, undefined ) {
 	$('.post_text_link').live('click', function (e){
-		$('.post_extended_text').toggle();
-		$(this).html('Hide');//this changes the link text
+		var txt = $(this).parent().children('.post_extended_text');
+		if (txt.css("display")=="none") {
+			txt.css("display", "inline");
+			$(this).html('Collapse');
+		} else {
+			txt.css("display", "none");
+			$(this).html('Expand');
+		}
 		return false;
 	})
 })( jQuery, this, document );
