@@ -13,6 +13,6 @@
 })( jQuery, this, document );
 
 
-$(document).ready(function() {
-      $("#markItUp").markItUp(mySettings);
-   });
+//$(document).ready(function() {
+  //    $("#markItUp").markItUp(mySettings);
+ //  });
