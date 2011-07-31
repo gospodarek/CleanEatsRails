@@ -1,11 +1,11 @@
 <% @title = "Search Results" %>
 
 <div class="results">
-  <p><%= @results.length %> results match the search criteria "<%= params[:query] %>"</p>
+  <h2><%= @results.length %> results match the search criteria "<%= params[:query] %>"</h2>
   
     <% @results.each do |result| %>
       <h1><%= result.title %></hl>
-        <h3 class="entry">by Admin on <%= result.created_at.to_s(:custom) %></h3>
+        <h3 class="entry">by Admin on <%= result.created_at.to_s(:custom) %></h3>        
         <%= truncate_post_with_expand(result.text, 100).html_safe %>
       <hr />
     <% end %>
