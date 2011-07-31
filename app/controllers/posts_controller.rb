@@ -5,7 +5,8 @@ class PostsController < ApplicationController
   end
   
   def search
-    @results = Post.where("title like ? or text like ?", "%#{params[:query]}%", "%#{params[:query]}%")
+    @posts = Post.where("title like ? or text like ?", "%#{params[:query]}%", "%#{params[:query]}%")
+    @from_recipes = params[:from]
   end
   
 end

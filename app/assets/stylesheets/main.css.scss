@@ -6,6 +6,8 @@ $white: #fff;
 
 body {
 	background-color: white;
+	margin-top: -20px;
+	
 	font: {
     family: "Trebuchet MS",Tahoma,Verdana,sans-serif;
     size: 1 em;
@@ -24,23 +26,26 @@ body {
 	}
 }
 .header {
+	padding-top: 15px;
   img{
   	z-index: 0;
-  	margin-top: -197px;
-  	margin-left: -585px;
+  	margin-top: -194px;
+  	margin-left: -592px;
   	position: absolute;	
   }
   h1 {
   	color: #303030;
-  	font-family: 'Josefin Sans', arial, serif;
+  	font-family: 'century gothic';
+		font-weight: 100;
   	margin-top: 30px;
-  	padding-top: 30px;
+  	padding-top: 26px;
   	padding-left: 10px;
-  	font-size: 86px;
+  	font-size: 80px;
   }
   h2{
   	font-size: 22px;
-  	margin-bottom: 10px;
+  	margin-bottom: 15px;
+		padding-top: 9px;
   	font-family: fantasy;
   }
 }
@@ -60,7 +65,9 @@ a:hover{
 .button{
 	margin-top: 5px;
 }
-
+.back_link{
+	text-decoration: none;
+}
 /*------------------Results Page---------------------*/
 .results{
 	h1{
@@ -69,6 +76,8 @@ a:hover{
 	h2{
 		border-bottom: dotted 1px #303030;
 		margin-bottom: 20px;
+		margin-top: 20px;
+		
 	}
 	p{
 		padding-bottom: 20px;
@@ -129,25 +138,6 @@ a:hover{
 	font-size: 17px;
 	font-weight: bold;
 }
-/*------------------twitter feed ---------------------------*/
-#feed{
-	min-height: 60px;
-	color: white;
-	text-shadow: 0px 0px;
-	max-width: 390px;
-	padding: 6px;
-	margin-bottom: 10px;
-	background-color: #54bede;
-	h3{
-  	font-family: serif;
-  	margin: 1px;
-  	padding: 1px;
-  }
-}
-#bird{
-	clear: none;
-	float: right;
-}
 
 /*-------------------IE hack for rounded corners------------*/
 
@@ -163,113 +153,3 @@ a:hover{
 	margin-bottom: 5px;
 }
 	
-	
-	/*table {
-	width: 500px;
-}
-.row{
-	width: 300px;
-	td{
-  	padding: 3px 0px 3px 0px;
-  	width: 61px;
-    }
-}
-label.error{
-	color: #F00;
-	font-weight: bold;
-	padding-left: 10px;
-}
-
-#contactForm label.error{
-	font-size: 0.9em;
-}
-#submit{
-	padding-top: 15px;
-}
-fieldset{
-  padding: 20px;
-  border:1px solid;
-}
-
-#showInfo {
-	padding: 17px;
-	border-color: #3f3f3f;
-	border-style: solid;
-	border-width: 1px;
-}
-.photo
-{
-	margin-top: 30px;
-	text-align: center;
-	border-color: black;
-	border-style: solid;
-	border-width: 2px;
-}
-
-form fieldset legend
-{
-	padding-bottom: 7px;
-	font-size: 14px;
-}
-
-#food_list{
-	min-height: 500px;
-}
-                                                                   
-.hidden {
-	display: none;
-}
-
-/*-------------------tabs-------------------------*/
-ul.tabs {
-	margin: 0;
-	padding: 0;
-	float: left;
-	list-style: none;
-	height: 32px; /*--Set height of tabs--*/
-	border-bottom: 1px solid #999;
-	border-left: 1px solid #999;
-	width: 100%;
-	li {
-  	float: left;
-  	margin: 0;
-  	padding: 0;
-  	height: 31px; /*--Subtract 1px from the height of the unordered list--*/
-  	line-height: 31px; /*--Vertically aligns the text within the tab--*/
-  	border: 1px solid #999;
-  	border-left: none;
-  	margin-bottom: -1px; /*--Pull the list item down 1px--*/
-  	overflow: hidden;
-  	position: relative;
-  	background: #c0e066;
-  	a {
-    	text-decoration: none;
-    	color: #000;
-    	display: block;
-    	font-size: 12px;
-    	padding: 0 9px;
-    	border: 1px solid $white; /*--Gives the bevel look with a 1px white border inside the list item--*/
-    	outline: none;
-      }
-    }
-}
-
-ul.tabs li a:hover {
-	background: white;
-}
-html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that the active tab does not listen to the hover properties--*/
-	background: $white;
-	border-bottom: 1px solid #fff; /*--Makes the active tab look like it's connected with its content--*/
-}
-.tab_container {
-	border: 1px solid #999;
-	border-top: none;
-	overflow: hidden;
-	clear: both;
-	float: left; width: 100%;
-	background: #fff;
-}
-.tab_content {
-	padding: 20px;
-	font-size: 13px;
-}

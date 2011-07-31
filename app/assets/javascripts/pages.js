@@ -6,10 +6,13 @@
 			$(this).html('Collapse');
 		} else {
 			txt.css("display", "none");
-			$(this).html('Expand');
+			$(this).html(' ...More');
 		}
 		return false;
 	})
 })( jQuery, this, document );
 
 
+$(document).ready(function() {
+      $("#markItUp").markItUp(mySettings);
+   });

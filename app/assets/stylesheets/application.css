@@ -10,6 +10,8 @@
  *= require footer
  *= require sidebar
  *= require navigation
+ *= require style
+ *= require markitup.style
  *= require objects/form/button
 */
 

@@ -10,7 +10,7 @@
 	  </div>
   <div class="field">
     <%= post.label :text %><br />
-    <%= post.text_area :text %>
+    <%= post.text_area :text, :size => "70x20" %>
   </div>
   <div>
     <%= image_tag @post.photo.url, :class => "upload_thumbnail" %>

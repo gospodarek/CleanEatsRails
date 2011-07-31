@@ -7,6 +7,13 @@
   h1 {
 	  font-size: 22px;
 	}
+	h2{
+		padding-bottom: 20px;
+		font: {
+			weight: bold;
+			size: 20px;
+		};
+	}
   h3 {
 		margin-top: -7px;
   	padding-left: 12px;
@@ -16,7 +23,15 @@
   	  family: fantasy;
   	  size: 11px;
   	}
+		
   }
+	ul{
+		padding: 20px 30px 30px 40px;
+		background-color: #efefef;
+	}
+	li{
+		
+	}
 }
 
 hr

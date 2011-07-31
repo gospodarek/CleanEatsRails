@@ -1,21 +1,11 @@
-<%= link_to("Back", posts_path, :class => '#') %>
+<%= link_to("Back", search_path(:query), :class => '#') %>
 
 <div class="post show">
-  <h2>Show Post</h2>
   
-  <table>
-    <tr>
-      <th>Title</th>
-      <td><%= @post.title %></td>
-    </tr>
-    <tr>
-      <th>Text</th>
-      <td><%= @post.text %></td>
-    </tr>
-    <tr>
-      <th>Date Created</th>      
-      <td><%= @post.created_at.to_date %></td>
-    </tr>
-  </table>
+    <h1 id="post"><%= @post.title %></hl>
+    <h3 class="entry">by Admin on <%= @post.created_at.to_s(:custom) %></h3>
+    <%= image_tag @post.photo.url, :class=> "upload" %><br />
+    <div class="post"><%= truncate_post_with_expand(@post.text).html_safe %></div>
+    <hr />
   
 </div>

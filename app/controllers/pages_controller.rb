@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   
   def index
-    @posts= Post.find(:all, :order => "id DESC", :limit => 5)   
+    @posts= Post.find(:all, :order => "id DESC", :limit => 3)   
   end
   
   def about

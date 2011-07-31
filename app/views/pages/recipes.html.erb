@@ -5,12 +5,12 @@
     
     <div class="ingredient_list">
       <ul>
-       <li>Apples</li>
-       <li><%= link_to "Black Beans", search_path(:query=>"black beans") %></li>   
-       <li><%= link_to "Lentils", search_path(:query=>"lentil") %></li>       
-       <li><%= link_to "Onion", search_path(:query=>"onion") %></li>   
-       <li><%= link_to "Tomatoes", search_path(:query=>"tomato") %></li>   
-       <li><%= link_to "Zucchini", search_path(:query=>"zucchini") %></li>   
+       <li><%= link_to "Apple", search_path(:query=>"apple", :from=>"recipes") %></li>
+       <li><%= link_to "Black Beans", search_path(:query=>"black beans", :from=>"recipes") %></li>   
+       <li><%= link_to "Lentils", search_path(:query=>"lentil", :from=>"recipes") %></li>       
+       <li><%= link_to "Onion", search_path(:query=>"onion", :from=>"recipes") %></li>   
+       <li><%= link_to "Tomatoes", search_path(:query=>"tomato", :from=>"recipes") %></li>   
+       <li><%= link_to "Zucchini", search_path(:query=>"zucchini", :from=>"recipes") %></li>
      </ul>
     </div>
   
