@@ -74,12 +74,11 @@ a:hover{
 /*-----------------Pagination----------------------*/
 
 .pagination{
+	text-align: center;
 	a{
 	text-decoration: none;
+	padding: 5px;
 	}
-}
-.prev{
-	float: right;
 }
 
 /*------------------Results Page---------------------*/
@@ -122,14 +121,14 @@ a:hover{
 #content {
 	margin: 1px;
 	line-height: 1.5em;
-	padding: 36px 45px 15px 35px;
+	padding: 36px 25px 15px 35px;
 	float: left;
 	color: #666666;
 	list-style-position: outside;
 	height: auto;
 	min-height: 340px;
 	text-align: left;
-	width: 490px;
+	width: 510px;
 	font-size: 15px;
 	h1{
 		margin-bottom: 10px;

@@ -1,7 +1,9 @@
 jQuery.noConflict();
 
 jQuery(document).ready(function() {  
-     jQuery("a[rel^='prettyPhoto']").prettyPhoto();
+     jQuery("a[rel^='prettyPhoto']").prettyPhoto(
+		{show_title: false}
+	);
 		
  });
 
