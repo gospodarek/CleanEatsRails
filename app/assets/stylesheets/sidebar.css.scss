@@ -11,6 +11,7 @@
 		h3{
 			border-bottom: solid #76aa1f 1px;
 			padding-bottom: 3px;
+			margin-bottom: 8px;
 			font-size: 16px;
 			color: #76aa1f;
 		}
@@ -20,9 +21,20 @@
 	margin-top: 20px;
 	text-align: center;
 	height: 280px;
+	width: auto;
+	padding: 0px 10px 0px 10px;
+	
+}
+.food_gallery_images{
 	width: 160px;
-
+	text-align: center;
 	margin-left: 40px;
+	padding-top: 8px;
+	
+}
+.thumbnail{
+	border: 1px solid black;
+	margin: 0px 2px 5px 2px;
 }
 #tagCloud{
 	padding: 10px;

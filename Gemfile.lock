@@ -59,6 +59,8 @@ GEM
     jquery-rails (1.0.12)
       railties (~> 3.0)
       thor (~> 0.14)
+    kaminari (0.12.4)
+      rails (>= 3.0.0)
     mail (2.3.0)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -136,6 +138,7 @@ DEPENDENCIES
   coffee-script
   cover_me (>= 1.0.0.rc6)
   jquery-rails
+  kaminari
   mysql2
   paperclip (~> 2.3)
   rails (= 3.1.0.rc4)

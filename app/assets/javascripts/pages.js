@@ -1,3 +1,10 @@
+jQuery.noConflict();
+
+jQuery(document).ready(function() {  
+     jQuery("a[rel^='prettyPhoto']").prettyPhoto();
+		
+ });
+
 (function ( $, window, document, undefined ) {
 	$('.post_text_link').live('click', function (e){
 		var txt = $(this).parent().children('.post_extended_text');

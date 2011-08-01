@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   
   def index
-    @posts= Post.find(:all, :order => "id DESC", :limit => 3)   
+    @posts= Post.order("id desc").page(params[:page]).per(2) 
   end
   
   def about

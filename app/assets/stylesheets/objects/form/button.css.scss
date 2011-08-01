@@ -1,9 +1,7 @@
 button,
 .button,
 .button_small,
-.pagination span,
-.pagination em,
-.pagination a {
+ {
 	width:auto;
 	cursor:pointer;
 	white-space:nowrap;
@@ -20,9 +18,7 @@ button,
 button,
 .button,
 .button_small,
-.pagination span,
-.pagination em,
-.pagination a {
+{
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
 	border-radius:3px;
@@ -39,7 +35,7 @@ button,
 	}
 a.button,
 a.button_small,
-.pagination a {
+{
 	text-decoration:none;
 	}
 a.button {
@@ -140,51 +136,12 @@ input.button_small {
 /* PAGINATION */
 /* --------------------------------------------------------------------- */
 
-.pagination {
-	list-style:none;
-	height:20px;
-	margin:0;
-	padding:0;
-	}
-.pagination li {
-	float:left;
-	}
-.pagination span,
-.pagination em,
-.pagination a {
-	margin-right:4px;
-	padding:0 5px;
-	height:18px;
-	}
-.pagination .previous span,
-.pagination .previous a {
-	-moz-border-radius-bottomleft:5px;
-	-moz-border-radius-topleft:5px;
-	-webkit-border-bottom-left-radius:5px;
-	-webkit-border-top-left-radius:5px;
-	border-bottom-left-radius:5px;
-	border-top-left-radius:5px;
-	-webkit-background-clip:padding-box; /* fix corner bleed in Safari */
-	}
-.pagination .next span,
-.pagination .next a {
-	-moz-border-radius-bottomright:5px;
-	-moz-border-radius-topright:5px;
-	-webkit-border-bottom-right-radius:5px;
-	-webkit-border-top-right-radius:5px;
-	border-bottom-right-radius:5px;
-	border-top-right-radius:5px;
-	-webkit-background-clip:padding-box; /* fix corner bleed in Safari */
-	}
 
 /* Admin Buttons */
 
 button,
 .button,
 .button_small,
-.pagination span,
-.pagination em,
-.pagination a,
 .date_picker_calendar {
 	border-color:#999 #777 #777 #999;
 	text-shadow:0 -1px 1px #999;
@@ -222,95 +179,7 @@ button,
 	border-color:#E7E7E7;
 	}
 
-/* Stage 1 Buttons */
 
-#stage1_module button,
-#stage1_module .button,
-#stage1_module .button_small,
-#stage1_module .pagination span,
-#stage1_module .pagination em,
-#stage1_module .pagination a,
-#stage1_module .date_picker_calendar {
-	border-color:#7999BA #4F7398 #4F7398 #7999BA;
-	text-shadow:0 -1px 1px #4F7398;
-	-moz-box-shadow:inset 0 1px 1px #B2C4D6;
-	-webkit-box-shadow:inset 0 1px 1px #B2C4D6;
-	box-shadow:inset 0 1px 1px #B2C4D6;
-	background:#839DB7; /* old browsers */
-	background:-moz-linear-gradient(top, #99B1CA 0%, #8EA5BE 50%, #839DB7 50%, #778FA9 100%); /* firefox */
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#99B1CA), color-stop(50%,#8EA5BE), color-stop(50%,#839DB7), color-stop(100%,#778FA9)); /* webkit */
-	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#99B1CA', endColorstr='#778FA9',GradientType=0 ); /* ie */
-	}
-#stage1_module .pushed {
-	border-color:#4F7398 #7999BA #7999BA #4F7398;
-	text-shadow:0 1px 1px #4F7398;
-	-moz-box-shadow:inset 0 -1px 1px #B2C4D6;
-	-webkit-box-shadow:inset 0 -1px 1px #B2C4D6;
-	box-shadow:inset 0 1px -1px #B2C4D6;
-	background:#8EA5BE; /* old browsers */
-	background:-moz-linear-gradient(top, #778FA9 0%, #839DB7 50%, #8EA5BE 50%, #99B1CA 100%); /* firefox */
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#778FA9), color-stop(50%,#839DB7), color-stop(50%,#8EA5BE), color-stop(100%,#99B1CA)); /* webkit */
-	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#778FA9', endColorstr='#99B1CA',GradientType=0 ); /* ie */
-	}
-#stage1_module .hover {
-	border-color:#4F7398 #3a5c80 #3a5c80 #4F7398;
-	-moz-box-shadow:inset 0 1px 1px #91ABC5;
-	-webkit-box-shadow:inset 0 1px 1px #91ABC5;
-	box-shadow:inset 0 1px 1px #91ABC5;
-	background:#4F7398; /* old browsers */
-	background:-moz-linear-gradient(top, #6D8FB3 0%, #5E7FA1 50%, #4F7398 50%, #3D6084 100%); /* firefox */
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#6D8FB3), color-stop(50%,#5E7FA1), color-stop(50%,#4F7398), color-stop(100%,#3D6084)); /* webkit */
-	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#6D8FB3', endColorstr='#3D6084',GradientType=0 ); /* ie */
-	}
-#stage1_module .button_wrapper {
-	background:#F2F5F7;
-	border-color:#CFD8E2;
-	}
-
-/* Stage 2 Buttons */
-
-#stage2_module button,
-#stage2_module .button,
-#stage2_module .button_small,
-#stage2_module .pagination span,
-#stage2_module .pagination em,
-#stage2_module .pagination a,
-#stage2_module .date_picker_calendar {
-	border-color:#9FB99D #7C997A #7C997A #9FB99D;
-	text-shadow:0 -1px 1px #7C997A;
-	-moz-box-shadow:inset 0 1px 1px #C8D7C7;
-	-webkit-box-shadow:inset 0 1px 1px #C8D7C7;
-	box-shadow:inset 0 1px 1px #C8D7C7;
-	background:#A3B7A2; /* old browsers */
-	background:-moz-linear-gradient(top, #B6CAB4 0%, #ABBEA9 50%, #A3B7A2 50%, #97AA97 100%); /* firefox */
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#B6CAB4), color-stop(50%,#ABBEA9), color-stop(50%,#A3B7A2), color-stop(100%,#97AA97)); /* webkit */
-	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#B6CAB4', endColorstr='#97AA97',GradientType=0 ); /* ie */
-	}
-#stage2_module .pushed {
-	border-color:#7C997A #9FB99D #9FB99D #7C997A;
-	text-shadow:0 1px 1px #7C997A;
-	-moz-box-shadow:inset 0 -1px 1px #C8D7C7;
-	-webkit-box-shadow:inset 0 -1px 1px #C8D7C7;
-	box-shadow:inset 0 1px -1px #C8D7C7;
-	background:#ABBEA9; /* old browsers */
-	background:-moz-linear-gradient(top, #B6CAB4 0%, #A3B7A2 50%, #ABBEA9 50%, #97AA97 100%); /* firefox */
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#97AA97), color-stop(50%,#A3B7A2), color-stop(50%,#ABBEA9), color-stop(100%,#B6CAB4)); /* webkit */
-	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#97AA97', endColorstr='#B6CAB4',GradientType=0 ); /* ie */
-	}
-#stage2_module .hover {
-	border-color:#7C997A #638061 #638061 #7C997A;
-	-moz-box-shadow:inset 0 1px 1px #B0C6AF;
-	-webkit-box-shadow:inset 0 1px 1px #B0C6AF;
-	box-shadow:inset 0 1px 1px #B0C6AF;
-	background:#7C997A; /* old browsers */
-	background:-moz-linear-gradient(top, #97B495 0%, #87A285 50%, #7C997A 50%, #6B8669 100%); /* firefox */
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#97B495), color-stop(50%,#87A285), color-stop(50%,#7C997A), color-stop(100%,#6B8669)); /* webkit */
-	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#97B495', endColorstr='#6B8669',GradientType=0 ); /* ie */
-	}
-#stage2_module .button_wrapper {
-	background:#F3F4ED;
-	border-color:#D5DBC3;
-	}
 
 /* --------------------------------------------------------------------- */
 /* DISABLED BUTTONS */
@@ -320,8 +189,7 @@ button,
 [readonly],
 .disabled,
 .readonly,
-.pagination span,
-.pagination em {
+ {
 	opacity:0.6;
 	-ms-filter:"alpha(opacity=60)";
 	filter:alpha(opacity=60);

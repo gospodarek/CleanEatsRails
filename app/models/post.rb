@@ -21,3 +21,5 @@ class Post < ActiveRecord::Base
     self.photo = nil if delete_photo?
   end
 end
+
+

@@ -68,6 +68,20 @@ a:hover{
 .back_link{
 	text-decoration: none;
 }
+.page{
+	color: green;
+}
+/*-----------------Pagination----------------------*/
+
+.pagination{
+	a{
+	text-decoration: none;
+	}
+}
+.prev{
+	float: right;
+}
+
 /*------------------Results Page---------------------*/
 .results{
 	h1{

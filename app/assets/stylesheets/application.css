@@ -10,6 +10,7 @@
  *= require footer
  *= require sidebar
  *= require navigation
+ *= require prettyPhoto
  *= require objects/form/button
 */
 

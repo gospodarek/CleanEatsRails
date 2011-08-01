@@ -1,13 +1,14 @@
 <% @title = "Home" %>
 
 <div class="post">
-
-    <% @posts.each do |post| %>
-      <h1 id="post"><%= post.title %></hl>
-      <h3 class="entry">by Admin on <%= post.created_at.to_s(:custom) %></h3>
-      <%= image_tag post.photo.url, :class=> "upload" %><br />
-      <div class="post"><%= truncate_post_with_expand(post.text).html_safe %></div>
-      <hr />
-    <% end %>
-  <%= link_to("Older Posts", )%>
+  <% @posts.each do |post| %>
+    <h1 id="post"><%= post.title %></hl>
+    <h3 class="entry">by Admin on <%= post.created_at.to_s(:custom) %></h3>
+    <%= image_tag post.photo.url, :class=> "upload" %><br />
+    <div class="post"><%= truncate_post_with_expand(post.text).html_safe %></div>
+    <hr />
+  <% end %>
+  <%= paginate @posts %>
+  
 </div>
+

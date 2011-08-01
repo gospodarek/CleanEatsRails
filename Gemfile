@@ -9,6 +9,7 @@ gem 'coffee-script'
 gem 'uglifier'
 gem "paperclip", "~> 2.3"
 gem 'jquery-rails'
+gem 'kaminari'
 
 group :development do
 	gem 'rspec'
