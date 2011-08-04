@@ -7,12 +7,15 @@
       <%= comment.created_at.to_s(:custom) %></div>
     <div class="comment_body">
       <%= comment.body %>
+      
+      <div class="delete_comment">
+        <%= link_to 'Delete Comment', [comment.post, comment],
+                     :confirm => 'Are you sure?',
+                     :method => :delete %>
+      </div>
+
     </div>
-    <div class="delete_comment">
-      <%= link_to 'Destroy Comment', [comment.post, comment],
-                   :confirm => 'Are you sure?',
-                   :method => :delete %>
-    </div>
+    
   </div>
   
 <% end %>
