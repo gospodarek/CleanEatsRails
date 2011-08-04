@@ -1,5 +1,5 @@
 <%
-@title = (@post.new_record?) ? "New Post" : "Edit Post"
+@title = (@post.new_record?) ? "Admin New Post" : "Admin Edit Post"
 %>
 
 
@@ -7,32 +7,13 @@
 
 <h1><%=@title%></h1>
 
-<%= form_for([:admin, @post], :html => {:multipart => true}) do |f| %>
+<%= form_for([:admin, @post], :html => {:multipart => true}) do |post| %>
  <%= error_messages_for(@post) %>
  
-	<div class="field">
-	    <%= f.label :title, "Post Title" %><br />
-	    <%= f.text_field :title %>
-	  </div>
-  <div class="field">
-    <%= f.label :text %><br />
-    <%= f.text_area :text, :id=> "markItUp", :size => "70x20" %>
-  </div>
-  <div>
-    <% if @post.new_record? %>
-      <%= f.label :photo, "Upload a photo" %><br />
-      <%= f.file_field :photo %>
-    <% else %>
-      <%= image_tag @post.photo.url, :class => "upload_thumbnail" %>
-      <%= f.label :delete_photo, "Delete current photo" %>
-      <%= f.check_box(:delete_photo) %><br />
-      <%= f.label :photo, "Upload a photo" %><br />
-      <%= f.file_field :photo%>
-    <% end %>
-  </div>
+<%= render :partial => "layouts/form", :locals => { :post => post } %>
  
   <div class="actions">
-    <%= f.submit "Submit", :class=>"button" %><%=link_to("Cancel", admin_posts_path, :class=>"button")%>
+    <%= post.submit "Submit", :class=>"button" %><%=link_to("Cancel", admin_posts_path, :class=>"button")%>
   </div>
 <% end%>
 

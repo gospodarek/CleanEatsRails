@@ -1,0 +1,18 @@
+<% @post.comments.each do |comment| %>
+  <div class="single_comment">
+    <div class="commenter">
+      <%= comment.commenter %> says . . . 
+    </div>
+    <div class="comment_date">
+      <%= comment.created_at.to_s(:custom) %></div>
+    <div class="comment_body">
+      <%= comment.body %>
+    </div>
+    <div class="delete_comment">
+      <%= link_to 'Destroy Comment', [comment.post, comment],
+                   :confirm => 'Are you sure?',
+                   :method => :delete %>
+    </div>
+  </div>
+  
+<% end %>
