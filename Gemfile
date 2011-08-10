@@ -4,9 +4,10 @@ gem 'rails', '3.1.0.rc4'
 gem 'mysql2'
 
 # Asset template engines
-gem 'sass'
+gem 'sass-rails'
 gem 'coffee-script'
 gem 'uglifier'
+gem 'sprockets'
 gem "paperclip", "~> 2.3"
 gem 'jquery-rails'
 gem 'kaminari'
