@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   
+  skip_before_filter :require_signin
+  
   def show
     @post = Post.find(params[:id])
   end

@@ -1,5 +1,5 @@
 class Admin::PostsController < ApplicationController
-
+  
   layout 'admin'
   
   def index
@@ -45,4 +45,6 @@ class Admin::PostsController < ApplicationController
     flash[:success] = "Post destroyed!"
     redirect_to(admin_posts_path)
   end
+
+
 end

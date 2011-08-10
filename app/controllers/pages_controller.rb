@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
   
+  skip_before_filter :require_signin
+  
   def index
     @posts= Post.order("id desc").page(params[:page]).per(3) 
   end

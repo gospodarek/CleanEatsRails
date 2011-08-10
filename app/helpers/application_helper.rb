@@ -13,5 +13,17 @@ module ApplicationHelper # This helper is global and can be used by all controll
   def error_messages_for( object)
     render :partial => 'shared/error_messages', :locals => {:object => object}
   end
+  
+  # SESSION STUFF
+  def current_user=(user)
+    @current_user = user
+  end
+  def current_user
+    @current_user = user
+    
+  end
+  def current_user?(user)
+    user == current_user
+  end
  
 end
