@@ -78,5 +78,5 @@ Post.create :title=>'Veggie Chili', :text=>'<p>Chili, for me is a weekly regular
 
 
 
-FileUtils.remove_dir("#{Rails.root}/app/assets/images/paperclip", true)
-FileUtils.cp_r("#{Rails.root}/public/images/paperclip.bk", "#{Rails.root}/app/assets/images/paperclip")
+FileUtils.remove_dir("#{Rails.root}/public/images/paperclip", true)
+FileUtils.cp_r("#{Rails.root}/public/images/paperclip.bk", "#{Rails.root}/public/images/paperclip")
