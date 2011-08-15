@@ -17,13 +17,11 @@ module ApplicationHelper # This helper is global and can be used by all controll
   # SESSION STUFF
   def current_user=(user)
     @current_user = user
+    session[:user_id]=user.id
   end
   def current_user
-    @current_user = user
-    
-  end
-  def current_user?(user)
-    user == current_user
+    user = User.find_by_id(session[:user_id]) if session[:user_id]
+    @current_user = user || false
   end
  
 end

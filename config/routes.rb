@@ -14,7 +14,7 @@ CleanEats::Application.routes.draw do
   match '/recipes' => 'pages#recipes'
   
   match '/admin' => 'sessions#new'
-  match '/signin',  :to => 'sessions#new'
+  match '/signin' => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
   
   namespace :admin do
