@@ -9,3 +9,5 @@ module PagesHelper
     initial
   end
 end
+
+#initial = truncate(text, :length => idx, :omission => "... #{link_to('[more]', "#", :class=>"post_text_link")}")

@@ -1,3 +1,6 @@
+<%
+@title = "Admin Show Post"
+%>
 <%= link_to("Back to List", admin_posts_path, :class => 'back_link') %>
 
 <div class="post show">
@@ -18,11 +21,20 @@
       <td><%= @post.created_at.to_date %></td>
     </tr>
     <tr>
+    
       <td class="actions">
         <%= link_to("Edit", edit_admin_post_path(@post), :action => 'edit', :class => 'action edit') %>
         <%= link_to("Delete", admin_post_path(@post), :class => 'action delete', :confirm =>"Sure you want to delete?", :method => :delete) %>
       </td>
       </tr>
   </table>
-  
+    <div class="comments" >
+       <h2>Comments</h2>
+        <% if @post.comments.blank? %>
+           <p>No comments</p>
+            <% else %>
+            <%= render 'comments/comments' %>
+            <% end %>        
+            
+  </div>
 </div>

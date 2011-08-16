@@ -1,6 +1,9 @@
 CleanEats::Application.routes.draw do
     
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
+  
   match '/' => 'pages#index'
   match '/about' => 'pages#about'
   match '/contact' => 'pages#contact'

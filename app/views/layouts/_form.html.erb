@@ -1,0 +1,23 @@
+<div class="field">
+    <%= post.label :title, "Post Title" %><br />
+    <%= post.text_field :title %>
+  </div>
+<div class="field">
+  <%= post.label :text %><br />
+  <%= post.text_area :text, :size => "70x20" %>
+</div>
+<div>
+  <% if @post.new_record? %>
+    <%= post.label :photo, "Upload a photo" %><br />
+    <%= post.file_field :photo %>
+  <% else %>
+    <%= image_tag @post.photo.url, :class => "upload_thumbnail" %>
+    <%= post.label :delete_photo, "Delete current photo" %>
+    <%= post.check_box(:delete_photo) %><br />
+    <%= post.label :photo, "Upload a photo" %><br />
+    <%= post.file_field :photo%>
+  <% end %>
+</div>
+
+
+

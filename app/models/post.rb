@@ -6,7 +6,9 @@ class Post < ActiveRecord::Base
                     :path => ":rails_root/public/images/paperclip/:id/:style/:basename.:extension"
                     
   before_validation :clear_photo
-   
+  
+  has_many :comments, :dependent => :destroy
+    
   def delete_photo=(value)
     @delete_photo = !value.to_i.zero?
   end

@@ -1,10 +1,25 @@
-
 <div class="post show">
   
     <h1 id="post"><%= @post.title %></hl>
     <h3 class="entry">by Admin on <%= @post.created_at.to_s(:custom) %></h3>
     <%= image_tag @post.photo.url, :class=> "upload" %><br />
-    <div class="post"><%= truncate_post_with_expand(@post.text).html_safe %></div>
-    <hr />
+    <div class="post"><%= truncate_post_with_expand(@post.text).html_safe %>
+      
+      <div class="comments" style="display: none">
+       <h2>Comments</h2>
+       
+       
+       <% if @post.comments.blank? %>
+         <p>No comments</p>
+          <% else %>
+          <%= render 'comments/comments' %>
+          <% end %>
+          
+          
+          <h2>Add a comment:</h2>
+          <%= render 'comments/form' %>
+      </div>
+    <hr />  
+  </div>
   
 </div>

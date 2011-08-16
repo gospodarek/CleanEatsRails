@@ -151,6 +151,45 @@ a:hover{
 	font-size: 17px;
 	font-weight: bold;
 }
+/*-------------------Comments------------*/
+.comments{
+	margin-bottom: 20px;
+	h2{
+		margin-top: 20px;
+		color: #76aa1f;
+		padding-bottom: 0px !important;
+		font-size: 16px !important;
+	}
+	p{
+		margin-top: 8px !important;
+		font-size: 12px !important;
+		
+	}
+	.single_comment{
+		padding: 0px 0px 5px 0px;
+		font-size: 12px;
+		.commenter{
+			font-weight: bold;
+			padding: 3px 0px 3px 10px;
+			background-color: #EFEFEF;
+			behavior: url(border-radius.htc);
+		  border-radius: 10px;
+		  -moz-border-radius: 5px;
+			border-radius: 5px;
+		}
+		.comment_body{
+			padding: 5px 0px 15px 15px;
+		}
+		.comment_date{
+			font-size: 10px;
+			padding-left: 15px;
+		}
+		.delete_comment{
+			float: right;
+		}
+	}
+
+}
 
 /*-------------------IE hack for rounded corners------------*/
 
