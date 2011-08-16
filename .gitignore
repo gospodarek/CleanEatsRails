@@ -17,4 +17,5 @@ coverage.data
 .rvmc
 .rvmrc
 .sass-cache/**/*
-app/assets/images/paperclip/**/*
+public/images/paperclip/**/*
+public/assets
