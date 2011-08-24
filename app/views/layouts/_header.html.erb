@@ -1,5 +1,10 @@
 <header>
 	<%= image_tag("peas.gif", :alt => "peas")%>
+	<% if current_user %>
+  <div class="sign_out_button">
+	  <%= link_to "Sign Out", signout_path %>
+	</div>
+	<% end %>
 	<div class="center">
 		<h1>Clean Eats</h1>
 		<h2>The journey to clean eating</h2>

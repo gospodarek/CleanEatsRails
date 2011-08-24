@@ -1,7 +1,7 @@
 class Admin::PostsController < ApplicationController
-
+    
   layout 'admin'
-  
+    
   def index
     @posts = Post.find(:all, :order => "id DESC")
   end
@@ -45,4 +45,6 @@ class Admin::PostsController < ApplicationController
     flash[:success] = "Post destroyed!"
     redirect_to(admin_posts_path)
   end
+
+
 end
