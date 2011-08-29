@@ -75,6 +75,43 @@ Post.create :title=>'Veggie Chili', :text=>'<p>Chili, for me is a weekly regular
 <p>The nice thing about chili is that you really can’t mess it up. If I have summer squash or green beans in the house, I will throw that in. Same thing for a variety of beans and lentils. Experiment!</p>',
 :photo_content_type=>"image/png", :photo_file_name=>"veggie_chili.jpg", :photo_file_size=>62787
 
+Post.create :title => 'Green Smoothie', :text => '<p>This is my breakfast every morning and I love it!  It is usually a beautiful shade of green, but sometimes red or purple depending on whether I add beets or not.</p><break/>
+<p>I throw in any vegetables I may have on hand, so they are never the same, but always delicious.</p>
+<ul>
+    <b>Ingredients</b></li>
+    <li>A ton of leafy greens - kale, chard, spinash, lettuce, beet stems and leaves, etc.</li>
+    <li>Celery</li>
+    <li>Carrot</li>
+    <li>Cucumber</li>
+    <li>Summer squash</li>
+    <li>Orange</li>
+    <li>Berries - blueberries, raspberries, blackberries</li>
+    <li>Small piece of banana</li>
+    <li>Parsley</li>
+    <li>Avocado</li>
+    <li>Almonds</li>
+    <li>Cold water</li>
+    <li>Ice</li>
+    <li>Beet</li>
+</ul>
+<p>Really, you can\'t go wrong.  I\'ve found that I now like my smoothies less sweet than I used to.  I think my taste buds are changing - in a good way!</p>',
+:photo_content_type=>"image/png", :photo_file_name=>"smoothie_jar.JPG", :photo_file_size=>51484
+
+Post.create :title => 'Black Bean Dip', :text => '<p>This is such an easy, cheap, yummy dish.  We use it as a dip and in our burritos.</p><break/>
+<ul>
+    <b>Ingredients</b></li>
+    <li>Cooked black beans - I pressure cook mine</li>
+    <li>Onion</li>
+    <li>Jalapeno pepper</li>
+    <li>Diced tomato</li>
+    <li>Dash of cumin</li>
+    <li>S & P</li>
+    <li>Cayenne Pepper</li>
+    <li>Lime juice</li>
+    <li>Garlic</li> 
+</ul>
+<p>Throw all the ingredients into your Vitamix and blend.  You can play with the amount of heat you add.</p>',
+:photo_content_type=>"image/png", :photo_file_name=>"black_bean_dip.jpg", :photo_file_size=>17725
 
 
 
