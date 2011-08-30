@@ -95,7 +95,7 @@ Post.create :title => 'Green Smoothie', :text => '<p>This is my breakfast every 
     <li>Beet</li>
 </ul>
 <p>Really, you can\'t go wrong.  I\'ve found that I now like my smoothies less sweet than I used to.  I think my taste buds are changing - in a good way!</p>',
-:photo_content_type=>"image/png", :photo_file_name=>"smoothie_jar.JPG", :photo_file_size=>51484
+:photo_content_type=>"image/png", :photo_file_name=>"smoothie_jar.jpg", :photo_file_size=>51484
 
 Post.create :title => 'Black Bean Dip', :text => '<p>This is such an easy, cheap, yummy dish.  We use it as a dip and in our burritos.</p><break/>
 <ul>
