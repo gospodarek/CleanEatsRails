@@ -5,8 +5,6 @@ class ApplicationController < ActionController::Base
   before_filter :require_signin
   
   def require_signin 
-    puts "*"*20
-    puts current_user   
     redirect_to admin_path if current_user.blank?
   end
   

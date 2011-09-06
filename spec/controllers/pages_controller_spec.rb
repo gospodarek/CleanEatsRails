@@ -8,4 +8,26 @@ describe PagesController do
     assigns[:posts].should_not be_nil
   end
   
+  it "should render about page" do
+    get :about
+    response.status.should == 200
+  end
+  
+  it "should render whatis page" do
+    get :whatis
+    response.status.should == 200
+  end
+  
+  it "should render contact page" do
+    get :contact
+    response.status.should == 200
+  end
+  
+  it "should send mail" do
+    post :send_message, {:name=>"John", :email=>"test@gmail.com", :text=>"This is another test comment."}
+    response.should redirect_to("/")
+  end
+
 end
+
+

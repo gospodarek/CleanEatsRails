@@ -11,5 +11,13 @@ describe PostsController do
     assigns[:post].title.should == "test"
   end
   
+  #it "should return correct results based on search options" do
+  #  mypost = Post.create(:title=>"test", :text=>"lots of text")
+   # :query=>"lots"
+   # Post.search
+    # @posts = Post.where("title like ? or text like ?", "%#{params[:query]}%", "%#{params[:query]}%")
+    #  @from_recipes = params[:from]
+  #end
+  
 end
 

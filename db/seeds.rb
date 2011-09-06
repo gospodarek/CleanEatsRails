@@ -3,7 +3,7 @@ Post.delete_all
 User.delete_all
 ActiveRecord::Base.connection.execute("ALTER TABLE posts AUTO_INCREMENT = 1;")
 
-User.create :email => 'gospodarek@gmail.com', :username =>'marsha', :password=>'abasin'
+User.create :email => 'test@gmail.com', :username =>'test', :password=>'test123'
 
 
 Post.create :title => 'CSA', :text => "<p>Looks delicious, doesn't it?</p><break/><p>For the past 3 years, my husband and I have joined a CSA, which stands for Community Supported Agriculture. Basically, as members, we buy into the costs of a farm
